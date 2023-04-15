@@ -163,52 +163,7 @@
                 </div>
 
                 <!--add city layout-->
-                <div class="add-view">
 
-                    <form class="search-form" name="search_form">
-                        <span class="search-form__cancel" ng-click="toggleAddScreen()">Cancel</span>
-                        <input class="search-form__input" required id="search-form__input"
-                               ng-keyup="cancelBubble($event)"
-                               ng-keydown="navigateSearch($event)"
-                               ng-model="search_form__input"
-                               type="text"
-                               placeholder="Enter city name">
-                        <div ng-show="search_form__input.length" ng-click="resetSearch()" class="search-form__reset">
-                            <svg width="7px" height="7px" viewBox="0 0 7 7" version="1.1"
-                                 xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g class="x-icon" transform="translate(-210.000000, -50.000000)" fill="#ffffff">
-                                        <g transform="translate(210.000000, 50.000000)">
-                                            <path d="M4.79797323,3.49831102 L6.68702082,1.60926343 C7.07929587,1.21698838 7.08268567,0.584374647 6.68662419,0.18831317 L6.80830887,0.309997852 C6.41581477,-0.0824962527 5.77890724,-0.0819473966 5.38735861,0.309601227 L3.49831102,2.19864882 L1.60926343,0.309601227 C1.21698838,-0.082673828 0.584374647,-0.0860636249 0.18831317,0.309997852 L0.309997852,0.18831317 C-0.0824962527,0.580807275 -0.0819473966,1.21771481 0.309601227,1.60926343 L2.19864882,3.49831102 L0.309601227,5.38735861 C-0.082673828,5.77963367 -0.0860636249,6.4122474 0.309997852,6.80830887 L0.18831317,6.68662419 C0.580807275,7.0791183 1.21771481,7.07856944 1.60926343,6.68702082 L3.49831102,4.79797323 L5.38735861,6.68702082 C5.77963367,7.07929587 6.4122474,7.08268567 6.80830887,6.68662419 L6.68662419,6.80830887 C7.0791183,6.41581477 7.07856944,5.77890724 6.68702082,5.38735861 L4.79797323,3.49831102 Z"></path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-                        </div>
-                    </form>
-
-                    <ul class="searched-list" id="searched-list">
-                        <li class="searched-list__item"
-                            ng-class="{'searched-list__item_active':city.selected}"
-                            ng-mouseover="setAsActive(city)"
-                            ng-mouseleave="unchooseActive()"
-                            ng-click="chooseCity()"
-                            ng-repeat="city in searched_array">
-                            <div class="searched-list__city">
-                                <div class="searched-list__over">{{city.value_spaced_city}}</div>
-                            </div>
-                            <div
-                                    class="searched-list__country">
-                                <div class="searched-list__over">{{city.value_spaced_country
-                                    }}
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="no_results" ng-if="!searched_array.length && search_form__input">Not Found</div>
-                </div>
                 <!--/add city layout-->
                 <div class="scroll-me" ng-if="cities.length && main_view && tip_appearance"></div>
             </div>
