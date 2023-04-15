@@ -759,8 +759,7 @@
           respose_text = 'yesterday';
         } else {
           //simple date
-          //respose_text = renderDate(timestamp_fin, val);
-          respose_text = moment.tz(timestamp_fin, val).format('h:mm A');
+          respose_text = renderDate(timestamp_fin, val);
         }
     
         // calculate the difference in hours
