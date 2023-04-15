@@ -1519,13 +1519,9 @@
     
                 var local = moment.tz.guess(),
                     defaultArray = [];
-    
-                if (local !== 'America/San_Francisco' && local !== 'America/New_York' && local !== 'Europe/London' && local !== 'Asia/Tokyo') {
-                    defaultArray.push(local);
-                }
-    
-                defaultArray.push('America/San_Francisco');
-                defaultArray.push('America/New_York');
+      
+                defaultArray.push('Europe/Berlin');
+                defaultArray.push('Peru_Time/PET');
                 defaultArray.push('Europe/London');
                 defaultArray.push('Asia/Tokyo');
     
