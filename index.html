@@ -121,7 +121,9 @@
                                 <div class="name-n-shift__shift">{{city | get_range : detected_city : range}}</div>
                             </div>
 
-                            <div class="time-n-day" ng-class="{'time-n-day__time_shifted':time_format=='am/pm'}">
+
+                            <div class="time-n-day" ng-class="{'time-n-day__time_shifted':time_format=='am/pm'}" ng-init="time_format='am/pm'">
+
                                 <div class="time-n-day__time"
                                      ng-bind-html="city | time_in_zone : moment : range : time_format"></div>
 
