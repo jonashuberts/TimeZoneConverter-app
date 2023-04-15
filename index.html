@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="assets/css/all.css?1.5"/>
 </head>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-
 <body ng-controller="wccController" ontouchstart="" class="ui-theme-{{ui_theme}}">
 
 <!--main app-->
@@ -124,7 +122,8 @@
                             </div>
 
                             <div class="time-n-day" ng-class="{'time-n-day__time_shifted':time_format=='am/pm'}">
-                                <div class="time-n-day__time" ng-bind-html="city | time_in_zone : moment : range : (time_format=='am/pm' ? 'h:mm A' : 'HH:mm')"
+                                <div class="time-n-day__time"
+                                     ng-bind-html="city | time_in_zone : moment : range : (time_format=='am/pm' ? 'h:mm A' : 'HH:mm')"
 
                                 <div class="time-n-day__day">
                                     <span class="time-n-day__day-val">{{city | date : moment : range}}</span>
