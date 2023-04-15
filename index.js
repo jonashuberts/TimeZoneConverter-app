@@ -1522,8 +1522,6 @@
       
                 defaultArray.push('Europe/Berlin');
                 defaultArray.push('Peru_Time/PET');
-                defaultArray.push('Europe/London');
-                defaultArray.push('Asia/Tokyo');
     
                 return defaultArray;
             }
