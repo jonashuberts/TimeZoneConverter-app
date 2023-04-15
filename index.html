@@ -123,7 +123,7 @@
 
                             <div class="time-n-day" ng-class="{'time-n-day__time_shifted':time_format=='am/pm'}">
                                 <div class="time-n-day__time"
-                                     ng-bind-html="city | time_in_zone : moment : range : (time_format=='am/pm' ? 'h:mm A' : 'HH:mm')"
+                                     ng-bind-html="city | time_in_zone : moment : range : time_format"></div>
 
                                 <div class="time-n-day__day">
                                     <span class="time-n-day__day-val">{{city | date : moment : range}}</span>
